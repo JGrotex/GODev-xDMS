@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+* {
+  margin: 0; 
+  padding: 0; 
+  box-sizing:border-box;
+}
+
+body {
+  background: hsl(0, 0%, 100%);
+  font-family:"Helvetica" ,"sans-serif";
+}
+
+.panel {
+  position: absolute;
+  top:16mm;
+  left:2%;
+  width:95%;
+  min-width:300px;
+  height:87%;
+  background: hsl(0, 0%, 90%);
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 0 13px hsla(0, 0%, 33%, 0.8);
+}
+
+.labelgroup {
+  width:100%;
+  position: relative;
+  top:0;
+  z-index: 13;
+  height:6mm;
+  font-weight: lighter;
+  overflow: hidden;
+  box-shadow: 0 4px 4px -4px hsl(0, 0%, 15%);
+}
+.labelgroup > label {
+  height:6mm; line-height: 6mm;
+  padding-left:10px;
+  padding-right:10px;
+  cursor: pointer;
+  color:hsl(0, 0%, 90%);
+  display: inline-block;
+  border-left: 1px solid hsl(0, 0%, 60%);
+  background:hsl(0, 0%, 56%);
+}
+.labelgroup > label:hover {
+  -webkit-filter:brightness(110%);
+  -moz-filter:brightness(110%);
+  filter:brightness(110%);
+}
+.labelgroup > label:nth-of-type(1) {
+  width:calc(100% - 3cm);
+}
+.labelgroup > label:nth-of-type(2) {
+  width:3cm;
+  text-align: center;
+}
+
+.filelist {
+  width: 100%;
+  position: relative;
+  display: block;
+  overflow-y: auto;
+  height:calc(100% - 2mm);
+}
+.filelist > div {
+  width: 100%;
+  display: block;
+  height: 6mm; 
+  line-height: 6mm;
+  color:hsla(0, 0%, 50%, 0.95);
+}
+.filelist > div > span:nth-of-type(1):not(.dir) {
+  width: calc(100% - 4cm);
+  display: inline-block;
+  font-weight: lighter;
+  padding-left: 10px;
+  cursor: pointer;
+}
+.filelist > div > span:nth-of-type(2):not(.dir) {
+  width:4cm;
+  display:inline-block;
+  text-align:center;
+}
+.filelist > div:hover > span:nth-of-type(1) {
+  color:hsla(0, 0%, 95%, 0.95);
+  background:hsla(0, 0%, 35%, 0.9);
+}
+.filelist > div:hover > span:nth-of-type(2) {
+  color:hsla(0, 0%, 95%, 0.95);
+  background: hsl(0, 0%, 46%);
+}
+.dirdiv {
+  height: 6mm !important;
+  line-height: 6mm;
+}
+.dir {
+  display:inline-block;
+  font-weight: lighter;
+  width: 100%;
+  height: 6mm !important;
+  line-height: 6mm;
+  padding-left: 10px;
+  cursor: pointer;
+  background:hsl(211, 31%, 61%);
+  color:hsl(60, 1%, 100%);
+  z-index: 10;
+}
+.dir:before {
+  font-family: "Material Icons";
+  content: '\E2C8';
+}
+
+.ref-pane {
+  position: absolute;
+  top:4.5mm;
+  left:calc(1%);
+  width:calc(6mm);
+  min-width:20px;
+  height:12mm;
+  overflow: hidden;
+  border-radius: 3px;
+}
+.ref-pane .material-icons {
+  color:rgb(121, 121, 121);
+  font-size: 24px !important;  
+}
+
+.ref-bar {
+  position: absolute;
+  top:4.5mm;
+  left:calc(4%);
+  width:calc(55% - 6mm);
+  min-width:140px;
+  height:8mm;
+  overflow: hidden;
+  border-radius: 3px;
+}
+.ref-bar > input[type=text] {
+  font-family: "Helvetica" ,"sans-serif";
+  position: relative;
+  display: block;
+  border:0px;
+  outline:none !important;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  color:rgb(121, 121, 121);
+  height: 6mm; 
+  line-height: 6mm;
+}
+
+.ref-tools {
+  position: absolute;
+  top:4.5mm;
+  left:calc(92%);
+  width:calc(6mm);
+  min-width:20px;
+  height:12mm;
+  overflow: hidden;
+  border-radius: 3px;
+}
+.ref-tools .material-icons {
+  color:rgb(121, 121, 121);
+  font-size: 24px !important;  
+}
+
+.material-icons {
+  font-size: 20px !important;  
+}
+
