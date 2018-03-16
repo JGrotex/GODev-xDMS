@@ -2,6 +2,7 @@
 based on Ideas from a old Java Implementation created in 2010
 
 ## Available features
+ - open Folder by using 'ref' URL Parameter
  - list files of a specific subfolder under a fix rootpath
  - download files, or open them in a new browser tab
  - upload new files to ref Folder
